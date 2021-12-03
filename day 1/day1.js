@@ -1999,7 +1999,10 @@ let depthData = `100
 10041
 10044`
 
-const depthArray = depthData.split(/\r?\n/);
+const splitArray = depthData.split(/\r?\n/);
+const depthArray = splitArray.map(depth => {
+    return parseInt(depth, 10)
+})
 
 console.log(depthArray.length);
 
